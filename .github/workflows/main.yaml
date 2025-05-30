@@ -27,7 +27,7 @@ jobs:
         run: mvn clean verify --file ./simple-api/pom.xml
 
       - name: SonarCloud Analysis
-        run: mvn -B verify sonar:sonar -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }} -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION_KEY }} -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }} --file ./simple-api/pom.xml
+        run: mvn -B verify sonar:sonar -Dsonar.projectKey=tp-github-actions_project -Dsonar.organization=tp-github-actions -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }} --file ./simple-api/pom.xml
 
 
   build-and-push-docker-image:
