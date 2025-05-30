@@ -1,15 +1,16 @@
-name: CI devops 2025
+name: Build and Publish Docker Images
 on:
-  push:
-    # This workflow is triggered on push to the main and develop branches
-    branches: 
-      - main
-  pull_request:
+  workflow_run:
+    workflows: ["Run Backend Tests"]
+    types:
+      - completed
 
 jobs:
-  build-and-push-docker-image:
-    needs: test-backend
-    runs-on: ubuntu-24.04
+  build-and-publish:
+    if: >
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.head_branch == 'main'
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
