@@ -1,0 +1,12 @@
+---
+- name: Launch simple-api container
+  docker_container:
+    name: simple-api
+    image: ktarde/tp-devops-simple-api
+    state: started
+    restart_policy: unless-stopped
+    networks:
+      - name: app-network
+    env:
+      DATABASE_HOST: "{{ db_host }}"
+      DATABASE_PASSWORD: "{{ db_password }}"

@@ -1,0 +1,11 @@
+---
+- name: Launch httpd container
+  docker_container:
+    name: httpd
+    image: ktarde/tp-devops-http-server
+    state: started
+    restart_policy: unless-stopped
+    networks:
+      - name: app-network
+    ports:
+      - "80:80"
