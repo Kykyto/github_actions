@@ -43,6 +43,6 @@ jobs:
       - name: Build and push frontend
         uses: docker/build-push-action@v6
         with:
-          context: ./devlops-front-main
+          context: ./devops-front-main
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/tp-devops-front:latest
           push: ${{ github.ref == 'refs/heads/main' }}
