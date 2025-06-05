@@ -58,7 +58,7 @@ public class DepartmentController {
     }
 
     @GetMapping(value= "/test")
-    public ResponseEntity<Object> getDepartments() {
-        return ResponseEntity.ok(departmentService.getDepartments());
+    public ResponseEntity<Object> getTest() {
+        return ResponseEntity.ok("YOUHOUUU");
     }
 }
