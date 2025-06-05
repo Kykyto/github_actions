@@ -1,4 +1,9 @@
 ---
+- name: Pull latest simple-api image
+  docker_image:
+    name: ktarde/tp-devops-simple-api
+    source: pull
+
 - name: Launch simple-api container
   docker_container:
     name: simple-api
