@@ -33,5 +33,5 @@ jobs:
           -e "db_name=${{ secrets.DB_NAME }}" \
           -e "db_user=${{ secrets.DB_USER }}" \
           -e "db_password=${{ secrets.DB_PASSWORD }}" \
-          -e "db_host=${{ secrets.DB_HOST }}"
+          -e "db_host=${{ secrets.DB_HOST }}" \
           --private-key=~/.ssh/id_rsa
