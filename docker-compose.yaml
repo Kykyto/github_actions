@@ -24,6 +24,13 @@ services:
     networks:
       - my-network
 
+  front:
+    build: "devops-front-main"
+    ports:
+      - "3000:3000"
+    networks:
+      - my-network
+
 networks:
   my-network:
 

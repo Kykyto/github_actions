@@ -1,0 +1,13 @@
+- name: Pull Front image
+  docker_image:
+    name: "ktarde/tp-devops-front"
+    source: pull
+
+- name: Run Front container
+  docker_container:
+    name: front
+    image: "ktarde/tp-devops-front"
+    networks:
+      - name: app-network
+    restart_policy: unless-stopped
+    state: started
