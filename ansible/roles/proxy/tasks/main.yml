@@ -1,4 +1,9 @@
 ---
+- name: Pull latest httpd image
+  docker_image:
+    name: ktarde/tp-devops-http-server
+    source: pull
+
 - name: Launch httpd container
   docker_container:
     name: httpd
