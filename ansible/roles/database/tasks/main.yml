@@ -6,7 +6,7 @@
 - name: Run Database container
   docker_container:
     name: database
-    image: "ktarde/tp-devops-database"
+    image: "ktarde/tp-devops-database:latest"
     networks:
       - name: app-network
     env:
