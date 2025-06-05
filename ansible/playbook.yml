@@ -1,11 +1,6 @@
 ---
 - hosts: all
   become: yes
-  vars:
-    db_name: "db"
-    db_user: "usr"
-    db_password: "pwd"
-    db_host: "database"
   roles:
     - docker
     - network
