@@ -1,4 +1,4 @@
-Docker Compose - 3-Tier App
+# Docker Compose - 3-Tier App
 
 This project uses Docker Compose to run three services:
 
